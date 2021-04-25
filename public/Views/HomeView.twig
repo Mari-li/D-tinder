@@ -1,0 +1,18 @@
+
+{% include 'Layouts.twig' %}
+
+<title>Tinder: Home</title>
+
+<div class="w-screen h-screen flex flex-row flex-wrap">
+
+
+{% if id|length > 0 %}
+
+    <p class="text-6xl, text-purple-800, text-center"></p>
+
+    {% else %}
+        <p class="text-6xl, text-white-800, font-bold, text-center">Welcome to Disney Tinder!</p>
+        <p class="text-6xl, text-white-800, font-bold, text-center">Log into your account or register!</p>
+
+{% endif %}
+        </div>

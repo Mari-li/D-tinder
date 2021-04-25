@@ -1,0 +1,4 @@
+bootstrap/.env
+.idea
+vendor
+.phpunit.result.cache

@@ -1,0 +1,66 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.4/tailwind.min.css" rel="stylesheet"/>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+<header class="font-sans antialiased">
+
+    <div class="flex items-center justify-between flex-wrap bg-indigo-900 p-4">
+        <div class="flex-column ">
+            <img src="/Views/disney_pics_logo.jpg" alt="" class="h-20 w-24 rounded-full">
+            <a href="#" class="no-underline text-white text-bold mt-2"><span
+                        class="font-semibold text-3xl text-center tracking-tight">Tinder</span></a>
+        </div>
+
+
+
+        <div class="hidden w-full block md:flex md:w-auto">
+
+
+            {% if id|length > 0 %}
+                <div class="text xl text-white">Hello, {{ name }}</div>
+                <div>
+                    <a href="/logout"
+                       class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray hover:bg-white mt-4 sm:mt-0">Logout</a>
+                </div>
+
+            {% else %}
+                <div>
+                    <a href="/register"
+                       class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray hover:bg-white mt-4 sm:mt-0 mr-2">Register</a>
+                </div>
+
+                <div>
+                    <a href="/login"
+                       class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray hover:bg-white mt-4 sm:mt-0">Login</a>
+                </div>
+
+            {% endif %}
+
+        </div>
+    </div>
+    <nav class="bg-indigo-900 sm:block p-2">
+        <div class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="flex justify-center items-center text-sm sm:flex-grow uppercase">
+                <a href="/" class="no-underline block  sm:inline-block sm:mt-0 text-white hover:text-white mr-8">
+                    Home
+                </a>
+                <a href="/profile/{{ id }}"
+                   class="no-underline block  sm:inline-block sm:mt-0 text-white hover:text-white mr-8">
+                    Profile
+                </a>
+                <a href="/matching/{{ id }}"
+                   class="no-underline block sm:inline-block sm:mt-0 text-white hover:text-white mr-8">
+                    Matching
+                </a>
+                <a href="/cupid-page/{{ id }}"
+                   class="no-underline block sm:inline-block sm:mt-0 text-white hover:text-white mr-8">
+                     💘💘💘
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-900 ...">
+
+</body>
